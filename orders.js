@@ -262,12 +262,12 @@ function openOrderModal() {
     if (firstRow) {
         firstRow.querySelector('.order-product').value = '';
         firstRow.querySelector('.order-quantity').value = '1';
-        firstRow.querySelector('.product-price').textContent = '$0.00';
-        firstRow.querySelector('.product-subtotal').textContent = '$0.00';
+        firstRow.querySelector('.product-price').textContent = ' dt0.00';
+        firstRow.querySelector('.product-subtotal').textContent = ' dt0.00';
     }
     
     // Reset order total
-    document.getElementById('order-total').textContent = '$0.00';
+    document.getElementById('order-total').textContent = ' dt0.00';
     
     // Show modal
     modal.style.display = 'block';
@@ -381,8 +381,8 @@ function addProductRow() {
             <option value="">Select a product</option>
         </select>
         <input type="number" class="order-quantity" min="1" value="1" required>
-        <span class="product-price">$0.00</span>
-        <span class="product-subtotal">$0.00</span>
+        <span class="product-price"> dt0.00</span>
+        <span class="product-subtotal"> dt0.00</span>
         <button type="button" class="remove-product-btn">Remove</button>
     `;
     
@@ -437,8 +437,8 @@ function updateProductRowPricing(row) {
     const quantity = parseInt(quantityInput.value);
     
     if (isNaN(productId) || productId === 0) {
-        priceSpan.textContent = '$0.00';
-        subtotalSpan.textContent = '$0.00';
+        priceSpan.textContent = ' dt0.00';
+        subtotalSpan.textContent = ' dt0.00';
         return;
     }
     

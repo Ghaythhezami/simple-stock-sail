@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Management - Orders</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <div class="container">
@@ -13,9 +16,10 @@
             <h1>Stock Management System</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="inventory.html">Inventory</a></li>
-                    <li><a href="orders.html" class="active">Orders</a></li>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                     <li><a href="orders.html">Orders</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="commercials.html">Commercial Agents</a></li>
                     <li><a href="reports.html">Reports</a></li>
                     <li><a href="login.html" id="login-link">Login</a></li>
                 </ul>
@@ -92,15 +96,15 @@
                                         <!-- Products will be loaded here -->
                                     </select>
                                     <input type="number" class="order-quantity" min="1" value="1" required>
-                                    <span class="product-price">$0.00</span>
-                                    <span class="product-subtotal">$0.00</span>
+                                    <span class="product-price"> dt0.00</span>
+                                    <span class="product-subtotal"> dt0.00</span>
                                     <button type="button" class="remove-product-btn">Remove</button>
                                 </div>
                             </div>
                             <button type="button" id="add-product-btn">Add Another Product</button>
                         </div>
                         <div class="form-group total-section">
-                            <h4>Order Total: <span id="order-total">$0.00</span></h4>
+                            <h4>Order Total: <span id="order-total"> dt0.00</span></h4>
                         </div>
                         <div class="form-actions">
                             <button type="submit" id="save-order-btn">Save Order</button>
@@ -119,9 +123,15 @@
                         <!-- Order details will be loaded here -->
                     </div>
                     <div class="form-actions">
-                        <button type="button" id="validate-order-btn" class="action-btn green">Validate Order</button>
-                        <button type="button" id="cancel-order-btn" class="action-btn red">Cancel Order</button>
-                        <button type="button" id="close-details-btn">Close</button>
+                        <button type="button" id="validate-order-btn" class="action-btn green">
+                            <span class="material-icons">check_circle</span> Validate Order
+                        </button>
+                        <button type="button" id="cancel-order-btn" class="action-btn red">
+                            <span class="material-icons">cancel</span> Cancel Order
+                        </button>
+                        <button type="button" id="close-details-btn" class="action-btn">
+                            <span class="material-icons">close</span> Close
+                        </button>
                     </div>
                 </div>
             </div>
@@ -136,3 +146,22 @@
     <script src="orders.js"></script>
 </body>
 </html>
+<style>
+    .action-btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .green {
+        background-color: green;
+        color: white;
+    }
+    .red {
+        background-color: red;
+        color: white;
+    }
+</style>
