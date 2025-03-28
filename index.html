@@ -15,6 +15,9 @@
                 <ul>
                     <li><a href="index.html" class="active">Dashboard</a></li>
                     <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="commercials.html">Commercial Agents</a></li>
                     <li><a href="reports.html">Reports</a></li>
                     <li><a href="login.html" id="login-link">Login</a></li>
                 </ul>
@@ -35,12 +38,12 @@
                         <span class="stat-value" id="dash-total-value">$0.00</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-title">Low Stock Items</span>
-                        <span class="stat-value" id="dash-low-stock">0</span>
+                        <span class="stat-title">Total Orders</span>
+                        <span class="stat-value" id="dash-total-orders">0</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-title">Categories</span>
-                        <span class="stat-value" id="dash-categories">0</span>
+                        <span class="stat-title">Total Clients</span>
+                        <span class="stat-value" id="dash-total-clients">0</span>
                     </div>
                 </div>
                 
@@ -66,7 +69,8 @@
                     <h3>Quick Actions</h3>
                     <div class="action-buttons">
                         <a href="inventory.html" class="action-btn">Manage Inventory</a>
-                        <a href="inventory.html?action=add" class="action-btn">Add New Item</a>
+                        <a href="orders.html" class="action-btn">Manage Orders</a>
+                        <a href="clients.html" class="action-btn">Manage Clients</a>
                         <a href="reports.html" class="action-btn">View Reports</a>
                     </div>
                 </div>
@@ -78,6 +82,7 @@
         <p>Simple Stock Management System - Created with HTML, CSS and JavaScript</p>
     </footer>
     
+    <script src="data.js"></script>
     <script src="dashboard.js"></script>
 </body>
 </html>

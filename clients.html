@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - Clients</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Management System</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="clients.html" class="active">Clients</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main-content">
+            <div class="clients-section">
+                <h2>Client Management</h2>
+                
+                <div class="client-actions">
+                    <button id="create-client-btn" class="action-btn">Add New Client</button>
+                    <div class="search-box">
+                        <input type="text" id="client-search" placeholder="Search clients...">
+                        <button id="client-search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <div class="clients-list-container">
+                    <table id="clients-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Company</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Total Orders</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clients-list">
+                            <!-- Clients will be listed here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Client Creation/Edit Modal -->
+            <div id="client-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3 id="client-modal-title">Add New Client</h3>
+                    <form id="client-form">
+                        <div class="form-group">
+                            <label for="client-name">Name:</label>
+                            <input type="text" id="client-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-company">Company:</label>
+                            <input type="text" id="client-company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email:</label>
+                            <input type="email" id="client-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-phone">Phone:</label>
+                            <input type="text" id="client-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-address">Address:</label>
+                            <textarea id="client-address" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" id="save-client-btn">Save Client</button>
+                            <button type="button" id="cancel-client-modal-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Simple Stock Management System - Created with HTML, CSS and JavaScript</p>
+    </footer>
+    
+    <script src="data.js"></script>
+    <script src="clients.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - Commercial Agents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Management System</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="commercials.html" class="active">Commercial Agents</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main-content">
+            <div class="commercials-section">
+                <h2>Commercial Agents Management</h2>
+                
+                <div class="commercial-actions">
+                    <button id="create-commercial-btn" class="action-btn">Add New Commercial Agent</button>
+                    <div class="search-box">
+                        <input type="text" id="commercial-search" placeholder="Search agents...">
+                        <button id="commercial-search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <div class="commercials-list-container">
+                    <table id="commercials-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Territory</th>
+                                <th>Total Sales</th>
+                                <th>Performance</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="commercials-list">
+                            <!-- Commercial agents will be listed here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Commercial Agent Creation/Edit Modal -->
+            <div id="commercial-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3 id="commercial-modal-title">Add New Commercial Agent</h3>
+                    <form id="commercial-form">
+                        <div class="form-group">
+                            <label for="commercial-name">Name:</label>
+                            <input type="text" id="commercial-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commercial-email">Email:</label>
+                            <input type="email" id="commercial-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commercial-phone">Phone:</label>
+                            <input type="text" id="commercial-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commercial-territory">Territory:</label>
+                            <input type="text" id="commercial-territory" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" id="save-commercial-btn">Save Agent</button>
+                            <button type="button" id="cancel-commercial-modal-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Simple Stock Management System - Created with HTML, CSS and JavaScript</p>
+    </footer>
+    
+    <script src="data.js"></script>
+    <script src="commercials.js"></script>
+</body>
+</html>
