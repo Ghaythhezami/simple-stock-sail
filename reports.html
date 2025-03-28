@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - Reports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Management System</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="reports.html" class="active">Reports</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="main-content">
+            <div class="reports-section">
+                <h2>Inventory Reports</h2>
+                
+                <div class="report-filters">
+                    <div class="filter-group">
+                        <label for="report-type">Report Type:</label>
+                        <select id="report-type">
+                            <option value="inventory-value">Inventory Value</option>
+                            <option value="category-distribution">Category Distribution</option>
+                            <option value="stock-level">Stock Level</option>
+                        </select>
+                    </div>
+                    
+                    <button id="generate-report-btn" class="action-btn">Generate Report</button>
+                </div>
+                
+                <div class="report-container">
+                    <div id="report-visualization" class="report-visualization">
+                        <canvas id="report-chart"></canvas>
+                    </div>
+                    
+                    <div class="report-table-container">
+                        <h3 id="report-title">Inventory Value Report</h3>
+                        <table id="report-table">
+                            <thead id="report-table-head">
+                                <!-- Report headers will be added here dynamically -->
+                            </thead>
+                            <tbody id="report-table-body">
+                                <!-- Report data will be added here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="export-section">
+                    <h3>Export Options</h3>
+                    <div class="export-buttons">
+                        <button id="export-csv" class="export-btn">Export to CSV</button>
+                        <button id="export-print" class="export-btn">Print Report</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Simple Stock Management System - Created with HTML, CSS and JavaScript</p>
+    </footer>
+    
+    <script src="reports.js"></script>
+</body>
+</html>
